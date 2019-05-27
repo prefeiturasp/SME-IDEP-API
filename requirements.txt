@@ -1,0 +1,8 @@
+Django==2.2.1
+psycopg2-binary==2.7.6
+kombu-sqlalchemy==1.1.0
+djangorestframework==3.9.4
+django-rest-swagger==2.2.0
+whitenoise
+django-filter
+django-environ
