@@ -1,3 +1,4 @@
+from django.db import connection
 from django.shortcuts import render
 
 # Create your views here.
@@ -5,6 +6,7 @@ from pessoas.api.serializers import UserSerializer
 from pessoas.models import Servidores, ServidorUser
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
 from rest_framework_jwt.views import ObtainJSONWebToken
 
@@ -17,8 +19,6 @@ class LoginView(ObtainJSONWebToken):
     def post(self, request, *args, **kwargs):
         # by default attempts username / passsword combination
         response = super(LoginView, self).post(request, *args, **kwargs)
-        # token = response.data['token']  # don't use this to prevent errors
-        # below will return null, but not an error, if not found :)
         res = response.data
         token = res.get('token')
 
@@ -55,3 +55,26 @@ class LoginView(ObtainJSONWebToken):
                          'token': token,
                          'user': user},
                         status=status.HTTP_200_OK)
+
+
+class EscolasDoServidor(APIView):
+
+    def get(self, request, format=None):
+        rf = request.data.get('rf', False)
+        if not rf:
+            return Response('tudo merda')
+
+        query = """
+        select serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
+from pessoas_servidores as serv
+inner join escolas_escolas as escolas on escolas.codesc = serv.cd_unidade_educacao_atual::text
+where cd_unidade_educacao_atual notnull
+and rf={};""".format(rf)
+
+        cursor = connection.cursor()
+        cursor.execute(query)
+        modalidades = {'results':
+                           [dict(zip([column[0] for column in cursor.description], row))
+                            for row in cursor.fetchall()]}
+
+        return Response(modalidades)
