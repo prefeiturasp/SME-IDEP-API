@@ -74,6 +74,17 @@ class AuthUserUserPermissions(models.Model):
         unique_together = (('user', 'permission'),)
 
 
+class CieduDwDwDimsServidoresDadosPessoais(models.Model):
+    rf = models.IntegerField(primary_key=True)
+    cd_cpf_pessoa = models.TextField(blank=True, null=True)
+    ano_nasc = models.IntegerField(blank=True, null=True)
+    mes_nasc = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'ciedu_dw_dw_dims_servidores_dados_pessoais'
+
+
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
     object_id = models.TextField(blank=True, null=True)
@@ -159,7 +170,7 @@ class EscolasEscolas(models.Model):
         db_table = 'escolas_escolas'
 
 
-class IdepAnosFinaisV1(models.Model):
+class IdepIdepanosfinaisv1(models.Model):
     cod_esc = models.IntegerField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
     icg = models.IntegerField(blank=True, null=True)
@@ -172,10 +183,10 @@ class IdepAnosFinaisV1(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'idep_anos_finais_v1'
+        db_table = 'idep_idepanosfinaisv1'
 
 
-class IdepAnosIniciaisV1(models.Model):
+class IdepIdepanosiniciaisv1(models.Model):
     cod_esc = models.IntegerField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
     icg = models.IntegerField(blank=True, null=True)
@@ -188,7 +199,7 @@ class IdepAnosIniciaisV1(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'idep_anos_iniciais_v1'
+        db_table = 'idep_idepanosiniciaisv1'
 
 
 class MainTestmodel(models.Model):
@@ -197,3 +208,59 @@ class MainTestmodel(models.Model):
     class Meta:
         managed = False
         db_table = 'main_testmodel'
+
+
+class PessoasServidores(models.Model):
+    rf = models.IntegerField(blank=True, null=True)
+    cd_cpf_pessoa = models.TextField(blank=True, null=True)
+    nm_pessoa = models.TextField(blank=True, null=True)
+    cd_serv_sme = models.IntegerField(blank=True, null=True)
+    mes_nasc = models.IntegerField(blank=True, null=True)
+    ano_nasc = models.IntegerField(blank=True, null=True)
+    idade = models.IntegerField(blank=True, null=True)
+    cd_sexo = models.TextField(blank=True, null=True)
+    cd_municipio_nasc = models.IntegerField(blank=True, null=True)
+    dc_municipio_nasc = models.TextField(blank=True, null=True)
+    uf_municipio_nasc = models.TextField(blank=True, null=True)
+    cd_pais_nasc = models.IntegerField(blank=True, null=True)
+    dc_pais_nasc = models.TextField(blank=True, null=True)
+    cd_municipio_res = models.IntegerField(blank=True, null=True)
+    dc_municipio_res = models.TextField(blank=True, null=True)
+    uf_municipio_res = models.TextField(blank=True, null=True)
+    cd_raca_cor = models.IntegerField(blank=True, null=True)
+    dc_raca_cor = models.TextField(blank=True, null=True)
+    cd_def = models.IntegerField(blank=True, null=True)
+    dc_def = models.TextField(blank=True, null=True)
+    nivel_form = models.TextField(blank=True, null=True)
+    dc_sit_func = models.TextField(blank=True, null=True)
+    cd_cargo_base = models.IntegerField(blank=True, null=True)
+    dc_cargo_base = models.TextField(blank=True, null=True)
+    cd_area_atuacao_base = models.IntegerField(blank=True, null=True)
+    dc_area_atuacao_base = models.TextField(blank=True, null=True)
+    dt_inicio_cargo_base = models.TextField(blank=True, null=True)
+    cd_unidade_base = models.IntegerField(blank=True, null=True)
+    tp_unidade_base = models.TextField(blank=True, null=True)
+    dc_unidade_base = models.TextField(blank=True, null=True)
+    sigla_lotacao = models.TextField(blank=True, null=True)
+    tp_lotacao = models.TextField(blank=True, null=True)
+    cd_cargo_atual = models.IntegerField(blank=True, null=True)
+    dc_cargo_atual = models.TextField(blank=True, null=True)
+    cd_area_atuacao_cargo_atual = models.IntegerField(blank=True, null=True)
+    dc_area_atuacao_cargo_atual = models.TextField(blank=True, null=True)
+    cd_unidade_educacao_atual = models.IntegerField(blank=True, null=True)
+    tp_unidade_educacao_atual = models.TextField(blank=True, null=True)
+    dc_unidade_educacao_atual = models.TextField(blank=True, null=True)
+    sigla_atual = models.TextField(blank=True, null=True)
+    cd_unidade_funcao = models.IntegerField(blank=True, null=True)
+    cd_funcao = models.IntegerField(blank=True, null=True)
+    dc_funcao = models.TextField(blank=True, null=True)
+    dt_inicio_funcao = models.TextField(blank=True, null=True)
+    cd_unidade_sobreposto = models.IntegerField(blank=True, null=True)
+    cd_sobreposto = models.IntegerField(blank=True, null=True)
+    dc_sobreposto = models.TextField(blank=True, null=True)
+    dt_inicio_sobreposto = models.TextField(blank=True, null=True)
+    database = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'pessoas_servidores'

@@ -3,7 +3,72 @@
   <component name="ChangeListManager">
     <list default="true" id="032750d3-2289-42a5-8670-0874156ce0a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SME-Indice_IDEP-API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SME-Indice_IDEP-API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db/database" beforeDir="false" afterPath="$PROJECT_DIR$/config/db/database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/gunicorn/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/gunicorn/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/nginx/conf.d/local.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/nginx/conf.d/local.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/escolas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/indice_idep/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/indice_idep/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/indice_idep/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/indice_idep/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/indice_idep/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/indice_idep/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/modelos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/modelos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtests.py" beforeDir="false" afterPath="$PROJECT_DIR$/runtests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,44 +139,30 @@
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/serializers.py">
+        <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="231">
+              <caret line="146" column="69" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="69" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#311#326#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/settings.py">
+        <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            <state relative-caret-position="243">
+              <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,13 +171,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="112">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+              <folding>
+                <element signature="e#635#667#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -160,24 +257,15 @@
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/models.py" />
         <option value="$PROJECT_DIR$/indice_idep/idep/models.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/api/serializers.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql" />
+        <option value="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" />
+        <option value="$PROJECT_DIR$/indice_idep/pessoas/api/serializers.py" />
+        <option value="$PROJECT_DIR$/indice_idep/pessoas/views.py" />
         <option value="$PROJECT_DIR$/indice_idep/indice_idep/settings.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/SME-Indice_IDEP-API.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
+        <option value="$PROJECT_DIR$/indice_idep/pessoas/models.py" />
       </list>
     </option>
   </component>
@@ -222,7 +310,50 @@
               <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
               <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
               <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="escolas" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
               <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
+              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (SME-Indice_IDEP-API-a_qi1Oqp) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (SME-Indice_IDEP-API-a_qi1Oqp) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="indice_idep" type="b5f07198:RTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (SME-Indice_IDEP-API-a_qi1Oqp) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="indice_idep" type="b5f07198:RTreeStructureProvider$1" />
+              <item name="pessoas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (SME-Indice_IDEP-API-a_qi1Oqp) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="indice_idep" type="b5f07198:RTreeStructureProvider$1" />
+              <item name="pessoas" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,9 +363,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/indice_idep" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../escola_Aberta_fixt/escolas.csv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -295,46 +427,96 @@
       <updated>1558967562273</updated>
       <workItem from="1558967567315" duration="6342000" />
       <workItem from="1558979042830" duration="6085000" />
-      <workItem from="1558985252334" duration="3794000" />
+      <workItem from="1558985252334" duration="18274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16221000" />
+    <option name="totallyTimeSpent" value="30701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-1" width="1366" height="769" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3291536" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291536" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007553" side_tool="true" weight="0.3275862" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924472" weight="0.3275862" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="manage.py@SME-Indice_IDEP-API" order="13" weight="0.3291536" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3291536" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3291536" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924472" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39968652" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291536" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007553" side_tool="true" weight="0.3275862" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924472" visible="true" weight="0.3275862" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3291536" />
+      <window_info anchor="bottom" id="manage.py@SME-Indice_IDEP-API" order="14" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32930514" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.32930514" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/indice_idep/pessoas/views.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ServidorUser.objects.get(cd_cpf_pessoa=cpf)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ServidorUser.objects.get(rf=int(rf), cd_cpf_pessoa=cpf, ano_nasc=int(anonasc))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>jwt_payload_handler(servidor)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.body</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/runtests.py">
@@ -405,25 +587,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="13" column="73" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="73" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
           <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/escolas_escolas">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -445,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/modelos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="161" selection-start-line="161" selection-end-line="190" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -483,44 +645,226 @@
     <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/ciedu_dw_dw_dims_servidores_2019_05_28_09_03_45.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/ciedu_dw_dw_dims_servidores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="ctid" enabled="false" position="-1" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/servidores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="ctid" enabled="false" position="-1" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="221">
+            <caret line="13" column="73" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="73" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/ciedu_dw_dw_dims_servidores_dados_pessoais">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/modelos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="80" column="57" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="80" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/django/contrib/auth/hashers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/rest_framework_jwt/compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/rest_framework_jwt/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/rest_framework_jwt/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/rest_framework_jwt/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/756580105/-337502517/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="85" column="24" lean-forward="true" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/SME-Indice_IDEP-API-a_qi1Oqp/lib/python3.6/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/django_migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidoruser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/756580105/-337502517/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="491" selection-start-line="491" selection-end-line="491" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="146" column="69" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="69" />
+          <folding>
+            <element signature="e#311#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
