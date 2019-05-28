@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032750d3-2289-42a5-8670-0874156ce0a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indice_idep/escolas/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/escolas/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice_idep/idep/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indice_idep/idep/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/idep/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indice_idep/main/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/main/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/migrations/0002_auto_20190528_1701.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/migrations/0002_auto_20190528_1701.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice_idep/pessoas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/indice_idep/pessoas/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +59,15 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -68,47 +76,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#635#667#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="17">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidores">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+              <filtering>
+                <filter text="cd_unidade_educacao_atual='094218'" />
+                <filter text="cd_unidade_educacao_atual='94218'" />
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -155,7 +140,6 @@
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/models.py" />
-        <option value="$PROJECT_DIR$/indice_idep/idep/models.py" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/api/viewsets.py" />
         <option value="$PROJECT_DIR$/indice_idep/escolas/api/serializers.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -163,8 +147,10 @@
         <option value="$PROJECT_DIR$/indice_idep/indice_idep/settings.py" />
         <option value="$PROJECT_DIR$/indice_idep/indice_idep/urls.py" />
         <option value="$PROJECT_DIR$/indice_idep/pessoas/views.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql" />
         <option value="$PROJECT_DIR$/indice_idep/pessoas/models.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/indice_idep/idep/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql" />
       </list>
     </option>
   </component>
@@ -196,20 +182,14 @@
               <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
               <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
               <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
-              <item name="escolas" type="462c0819:PsiDirectoryNode" />
+              <item name="idep" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
               <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
               <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
-              <item name="escolas" type="462c0819:PsiDirectoryNode" />
+              <item name="idep" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
-              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
-              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
@@ -221,7 +201,28 @@
               <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
               <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
               <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
+              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
               <item name="pessoas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
+              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="pessoas" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SME-Indice_IDEP-API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SME-Indice_IDEP-API" type="462c0819:PsiDirectoryNode" />
+              <item name="indice_idep" type="462c0819:PsiDirectoryNode" />
+              <item name="pessoas" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,8 +234,9 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../escola_Aberta_fixt/escolas.csv" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/IDEP_Anos_Iniciais_v1.csv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -295,20 +297,21 @@
       <updated>1558967562273</updated>
       <workItem from="1558967567315" duration="6342000" />
       <workItem from="1558979042830" duration="6085000" />
-      <workItem from="1558985252334" duration="25309000" />
+      <workItem from="1558985252334" duration="28528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37736000" />
+    <option name="totallyTimeSpent" value="40955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-1" width="1366" height="769" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49924472" weight="0.3291536" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="0" sideWeight="0.49924472" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924472" weight="0.3291536" />
@@ -320,7 +323,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291536" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007553" side_tool="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924472" visible="true" weight="0.3275862" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924472" weight="0.3275862" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3291536" />
       <window_info anchor="bottom" id="manage.py@SME-Indice_IDEP-API" order="14" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -375,15 +378,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/runtests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entrypoint.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,13 +475,6 @@
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/idep/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -609,15 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/django_migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/756580105/-337502517/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -652,15 +630,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidoruser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
-          <filtering>
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
@@ -708,16 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -728,7 +687,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidores">
+    <entry file="file://$PROJECT_DIR$/indice_idep/main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/indice_idep/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indice_idep/idep/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/django_migrations">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
           <filtering>
@@ -737,27 +737,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidoruser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/database/postgres/schema/public/table/pessoas_servidores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bebb88b9-74e9-476e-95d6-277a5631fab5">
+          <filtering>
+            <filter text="cd_unidade_educacao_atual='094218'" />
+            <filter text="cd_unidade_educacao_atual='94218'" />
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1baa7e61-3e3c-4087-a0aa-1f09534c4dd3/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indice_idep/pessoas/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>

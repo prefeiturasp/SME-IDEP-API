@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class IdepAnosFinaisV1(models.Model):
-    cod_esc = models.IntegerField(primary_key=True)
+    cod_esc = models.TextField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
     icg = models.IntegerField(blank=True, null=True)
     number_2018 = models.TextField(db_column='2018', blank=True, null=True)
@@ -15,7 +15,7 @@ class IdepAnosFinaisV1(models.Model):
 
 
 class IdepAnosIniciaisV1(models.Model):
-    cod_esc = models.IntegerField(primary_key=True)
+    cod_esc = models.TextField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
     icg = models.IntegerField(blank=True, null=True)
     number_2018 = models.TextField(db_column='2018', blank=True, null=True)
