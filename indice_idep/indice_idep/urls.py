@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from idep.views import MetasAnosFinais, MetasAnosIniciais
 from pessoas.views import LoginView, EscolasDoServidor
 from rest_framework import routers
 from rest_framework_swagger.views import get_swagger_view
@@ -33,4 +34,6 @@ urlpatterns = [path('', include(router.urls)),
                path('admin/', admin.site.urls),
                path('login/', LoginView.as_view()),
                path('servidorescolas/', EscolasDoServidor.as_view()),
+               path('meta_ano_final/<slug:codesc>', MetasAnosFinais.as_view()),
+               path('meta_ano_inicial/<slug:codesc>', MetasAnosIniciais.as_view()),
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

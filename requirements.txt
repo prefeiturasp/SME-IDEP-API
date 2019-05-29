@@ -7,3 +7,5 @@ whitenoise
 django-filter
 django-environ
 djangorestframework-jwt
+pandas
+django-cors-headers

@@ -62,7 +62,7 @@ class EscolasDoServidor(APIView):
     def get(self, request, format=None):
         rf = request.data.get('rf', False)
         if not rf:
-            return Response('tudo merda')
+            return Response('RF não informado')
 
         query = """
         select serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
