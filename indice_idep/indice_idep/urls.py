@@ -33,7 +33,7 @@ urlpatterns = [path('', include(router.urls)),
                path(r'docs/', schema_view),
                path('admin/', admin.site.urls),
                path('login/', LoginView.as_view()),
-               path('servidorescolas/', EscolasDoServidor.as_view()),
+               path('servidorescolas/<slug:rf>', EscolasDoServidor.as_view()),
                path('meta_ano_final/<slug:codesc>', MetasAnosFinais.as_view()),
                path('meta_ano_inicial/<slug:codesc>', MetasAnosIniciais.as_view()),
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

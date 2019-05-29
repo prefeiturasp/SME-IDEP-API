@@ -59,8 +59,7 @@ class LoginView(ObtainJSONWebToken):
 
 class EscolasDoServidor(APIView):
 
-    def get(self, request, format=None):
-        rf = request.data.get('rf', False)
+    def get(self, request, rf, format=None):
         if not rf:
             return Response('RF não informado')
 
