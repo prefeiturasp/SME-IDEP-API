@@ -17,7 +17,6 @@ jwt_decode_handler = api_settings.JWT_DECODE_HANDLER
 
 class LoginView(ObtainJSONWebToken):
     def post(self, request, *args, **kwargs):
-        # by default attempts username / passsword combination
         response = super(LoginView, self).post(request, *args, **kwargs)
         res = response.data
         token = res.get('token')
@@ -30,8 +29,9 @@ class LoginView(ObtainJSONWebToken):
             rf = req.get('rf')
             password = req.get('cpf')
             anonasc = req.get('anonasc')
+            mesnasc = req.get('mesnasc')
 
-            if rf is None or password is None or anonasc is None:
+            if rf is None or password is None or anonasc is None or mesnasc is None:
                 return Response({'success': False,
                                  'message': 'Missing or incorrect credentials',
                                  'data': req},
@@ -39,7 +39,8 @@ class LoginView(ObtainJSONWebToken):
 
             # email exists in request, try to find user
             try:
-                servidor = ServidorUser.objects.get(rf=int(rf), password=password, ano_nasc=int(anonasc))
+                servidor = ServidorUser.objects.get(rf=int(rf), password=password, ano_nasc=int(anonasc),
+                                                    mes_nasc=int(mesnasc))
             except:
                 return Response({'success': False,
                                  'message': 'User not found',
