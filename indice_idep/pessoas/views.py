@@ -65,7 +65,7 @@ class EscolasDoServidor(APIView):
             return Response('RF não informado')
 
         query = """
-        select serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
+        select distinct serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
 from pessoas_servidores as serv
 inner join escolas_escolas as escolas on escolas.codesc = serv.cd_unidade_educacao_atual::text
 where cd_unidade_educacao_atual notnull
