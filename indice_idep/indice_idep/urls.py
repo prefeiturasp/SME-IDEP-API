@@ -17,12 +17,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from idep.views import MetasAnosFinais, MetasAnosIniciais
+from escolas.api.viewsets import EscolasViewSet
+from idep.views import MetasAnosFinais, MetasAnosIniciais, HistogramaIndicesIDEPAnoInicial, \
+    HistogramaIndicesIDEPAnoFinal
 from pessoas.views import LoginView, EscolasDoServidor
 from rest_framework import routers
 from rest_framework_swagger.views import get_swagger_view
-
-from escolas.api.viewsets import EscolasViewSet
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -36,4 +36,6 @@ urlpatterns = [path('', include(router.urls)),
                path('servidorescolas/<slug:rf>', EscolasDoServidor.as_view()),
                path('meta_ano_final/<slug:codesc>', MetasAnosFinais.as_view()),
                path('meta_ano_inicial/<slug:codesc>', MetasAnosIniciais.as_view()),
+               path('indices_ano_inicial/<slug:codesc>', HistogramaIndicesIDEPAnoInicial.as_view()),
+               path('indices_ano_final/<slug:codesc>', HistogramaIndicesIDEPAnoFinal.as_view()),
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
