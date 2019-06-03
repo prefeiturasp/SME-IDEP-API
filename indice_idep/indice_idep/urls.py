@@ -24,7 +24,7 @@ from pessoas.views import LoginView, EscolasDoServidor
 from rest_framework import routers
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title='Pastebin API')
+schema_view = get_swagger_view(title='IDEP API')
 
 router = routers.DefaultRouter()
 router.register(r'escolas', EscolasViewSet)

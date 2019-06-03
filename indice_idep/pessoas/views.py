@@ -17,6 +17,12 @@ jwt_decode_handler = api_settings.JWT_DECODE_HANDLER
 
 class LoginView(ObtainJSONWebToken):
     def post(self, request, *args, **kwargs):
+        """
+        Função que subscreve o Login do Django, utilizando algumas
+        informações do Servidor para autenticação
+        :param request: Requisição da chamada da função
+        :return: Token de autenticação
+        """
         response = super(LoginView, self).post(request, *args, **kwargs)
         res = response.data
         token = res.get('token')
@@ -61,15 +67,22 @@ class LoginView(ObtainJSONWebToken):
 class EscolasDoServidor(APIView):
 
     def get(self, request, rf, format=None):
+        """
+        Função que retorna um JSON com todas as escolas de um determinado Servidor
+        :param request: Requisição da chamada da função
+        :param rf: Parametro da url com o RF do Servidor
+        :return: JSON com as escolas que trabalham o Servidor
+        """
         if not rf:
             return Response('RF não informado')
 
-        query = """
-        select distinct serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
-from pessoas_servidores as serv
-inner join escolas_escolas as escolas on escolas.codesc = serv.cd_unidade_educacao_atual::text
-where cd_unidade_educacao_atual notnull
-and rf={};""".format(rf)
+        query = """        
+            select distinct serv.cd_unidade_educacao_atual, escolas.tipoesc, escolas.nomesc
+            from pessoas_servidores as serv
+            inner join escolas_escolas as escolas on escolas.codesc = serv.cd_unidade_educacao_atual::text
+            where cd_unidade_educacao_atual notnull
+            and rf={};
+            """.format(rf)
 
         cursor = connection.cursor()
         cursor.execute(query)

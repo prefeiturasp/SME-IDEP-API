@@ -1,16 +1,20 @@
-from django.db import connection
-from django.shortcuts import render
-
 # Create your views here.
+import pandas as pd
 from idep.models import IdepAnosIniciaisV1, IdepAnosFinaisV1
 from rest_framework.response import Response
 from rest_framework.views import APIView
-import pandas as pd
 
 
 class MetasAnosFinais(APIView):
 
     def get(self, request, codesc, format=None):
+        """
+        Função que retorna informações do indice e Meta dos Anos Finais
+        da escola selecionada
+        :param request: Requisição da chamada da função
+        :param codesc: Parametro da URL contendo o codigo da escola
+        :return: JSON com informações do indice e das metas da escola selecionada
+        """
         query = IdepAnosFinaisV1.objects.filter(cod_esc=codesc)
         esc = pd.DataFrame(list(query.values()))
         listinha = []
@@ -31,6 +35,14 @@ class MetasAnosFinais(APIView):
 class MetasAnosIniciais(APIView):
 
     def get(self, request, codesc, format=None):
+        """
+        Função que retorna informações do indice e Meta dos Anos Iniciais
+        da escola selecionada
+        :param request: Requisição da chamada da função
+        :param codesc: Parametro da URL contendo o codigo da escola
+        :return: JSON com informações do indice e das metas da escola selecionada
+        """
+
         query = IdepAnosIniciaisV1.objects.filter(cod_esc=codesc)
         esc = pd.DataFrame(list(query.values()))
         listinha = []
@@ -48,10 +60,18 @@ class MetasAnosIniciais(APIView):
         return Response({'result': listinha})
 
 
-class HistogramaIndicesIDEPAnoInicial(APIView):
+class HistogramaIndicesIDEPAnoFinal(APIView):
 
     def get(self, request, codesc, format=None):
-        query = IdepAnosIniciaisV1.objects.all()
+        """
+        Função que retorna os indices dos Anos Finais de todas as escolas
+        com os mesmos parametros da escola selecionada
+        :param request:Requisição da chamada da função
+        :param codesc:Parametro da URL contendo o codigo da escola
+        :return: JSON com os indices das outras escolas de mesmo perfil
+        e da escola selecionada
+        """
+        query = IdepAnosFinaisV1.objects.all()
         esc = pd.DataFrame(list(query.values()))
         esc.set_index('cod_esc', inplace=True)
 
@@ -66,10 +86,18 @@ class HistogramaIndicesIDEPAnoInicial(APIView):
         return Response({'result': {'indices': indices, 'indice_da_escola': sel_esc_indice}})
 
 
-class HistogramaIndicesIDEPAnoFinal(APIView):
+class HistogramaIndicesIDEPAnoInicial(APIView):
 
     def get(self, request, codesc, format=None):
-        query = IdepAnosFinaisV1.objects.all()
+        """
+        Função que retorna os indices dos Anos Iniciais de todas as escolas
+        com os mesmos parametros da escola selecionada
+        :param request:Requisição da chamada da função
+        :param codesc:Parametro da URL contendo o codigo da escola
+        :return: JSON com os indices das outras escolas de mesmo perfil
+        e da escola selecionada
+        """
+        query = IdepAnosIniciaisV1.objects.all()
         esc = pd.DataFrame(list(query.values()))
         esc.set_index('cod_esc', inplace=True)
 
