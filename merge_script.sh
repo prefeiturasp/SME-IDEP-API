@@ -9,5 +9,6 @@ export GIT_COMMITTER_NAME="Giuseppe Rosa"
 mkdir deploy
 cd deploy
 git clone https://github.com/prefeiturasp/SME-Indice_IDEP-API.git
+git checkout homolog
 git merge "$TRAVIS_COMMIT" || exit
 git push origin
