@@ -3,7 +3,7 @@ if [ "$TRAVIS_BRANCH" != "dev" ]; then
     exit 0;
 fi
 
-export GIT_COMMITTER_EMAIL= "giusepper11@gmail.com"
+export GIT_COMMITTER_EMAIL="giusepper11@gmail.com"
 export GIT_COMMITTER_NAME="Giuseppe Rosa"
 
 git checkout homolog || exit
