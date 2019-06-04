@@ -8,4 +8,4 @@ export GIT_COMMITTER_NAME="Giuseppe Rosa"
 
 git checkout homolog || exit
 git merge "$TRAVIS_COMMIT" || exit
-git push ... # here need some authorization and url
+git push
