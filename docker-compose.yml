@@ -8,7 +8,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     env_file:
-      - config/db/database
+      - .env
     networks:
       - database
     ports:
@@ -24,6 +24,8 @@ services:
       - .:/opt/services/djangoapp/src
       - static:/opt/services/djangoapp/static
       - media:/opt/services/djangoapp/media
+    env_file:
+      - .env
     networks:
       - database
       - nginx_network
