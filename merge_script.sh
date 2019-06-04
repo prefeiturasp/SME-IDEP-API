@@ -6,6 +6,8 @@ fi
 export GIT_COMMITTER_EMAIL="giusepper11@gmail.com"
 export GIT_COMMITTER_NAME="Giuseppe Rosa"
 
-git checkout homolog || exit
+git remote update
+git fetch
+git checkout --track origin/homolog || exit
 git merge "$TRAVIS_COMMIT" || exit
 git push
