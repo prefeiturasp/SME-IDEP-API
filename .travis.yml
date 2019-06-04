@@ -12,6 +12,7 @@ before_install:
   - chmod +x merge_script.sh
 
 script:
+  - cp .env.example .env
   - make test
 
 after_success:
