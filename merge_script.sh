@@ -12,7 +12,7 @@ git branch -lall
 git fetch --depth=1 git@github.com:prefeiturasp/SME-Indice_IDEP-API.git refs/heads/homolog:refs/remotes/origin/homolog
 echo "depois"
 git branch -lall
-git reset --hard HEAD
+git checkout -- .
 git checkout remotes/origin/homolog || exit
 git merge "$TRAVIS_COMMIT" || exit
 git push origin HEAD:homolog
