@@ -12,4 +12,4 @@ git clone https://github.com/prefeiturasp/SME-Indice_IDEP-API.git
 cd SME-Indice_IDEP-API
 git checkout homolog
 git merge "$TRAVIS_COMMIT" || exit
-git push
+git push https://'$github_username':'$github_password'@github.com/prefeiturasp/SME-Indice_IDEP-API.git
