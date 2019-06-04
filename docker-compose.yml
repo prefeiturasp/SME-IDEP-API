@@ -12,7 +12,7 @@ services:
     networks:
       - database
     ports:
-      - "5432:5432"
+      - "5435:5432"
 
   # web container, with django + gunicorn
   djangoapp:
