@@ -8,6 +8,16 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - chmod +x merge_script.sh
+  - >-
+    openssl aes-256-cbc
+    -K $encrypted_11da460eb7e8_key
+    -iv $encrypted_11da460eb7e8_iv
+    -in github_deploy_key.enc
+    -out github_deploy_key
+    -d
+    - chmod 600 github_deploy_key
+    - eval $(ssh-agent -s)
+    - ssh-add github_deploy_key
 
 script:
   - make tests
