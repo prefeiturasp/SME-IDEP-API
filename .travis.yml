@@ -1,6 +1,8 @@
-language: python
+language: node_js
 env:
   - DOCKER_COMPOSE_VERSION=1.4.2
+node_js:
+  - "node"
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -10,9 +12,10 @@ before_install:
   - chmod +x merge_script.sh
 
 script:
-  - make tests
+  - make test
 
 after_success:
+  - npm install --save-dev @alrra/travis-scripts
   - |
 
     $(npm bin)/set-up-ssh --key "$encrypted_11da460eb7e8_key" \
