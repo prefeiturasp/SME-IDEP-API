@@ -15,4 +15,4 @@ git branch -lall
 git reset --hard HEAD
 git checkout remotes/origin/homolog || exit
 git merge "$TRAVIS_COMMIT" || exit
-git push
+git push origin HEAD:homolog
