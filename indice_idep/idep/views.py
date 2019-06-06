@@ -1,6 +1,7 @@
 # Create your views here.
 import pandas as pd
-from idep.models import IdepAnosIniciaisV1, IdepAnosFinaisV1
+from idep.models import IdepAnosIniciaisV1, IdepAnosFinaisV1, IdepAnosIniciaisMetasEscolas, \
+    IdepAnosIniciaisIndiceEscolas
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -17,6 +18,8 @@ class MetasAnosFinais(APIView):
         """
         query = IdepAnosFinaisV1.objects.filter(cod_esc=codesc)
         esc = pd.DataFrame(list(query.values()))
+        if len(esc) == 0:
+            return Response({'result': {'erro': 'nenhuma escola encontrada'}})
         listinha = []
         for index, row in esc.iterrows():
             didi = {}
@@ -45,6 +48,8 @@ class MetasAnosIniciais(APIView):
 
         query = IdepAnosIniciaisV1.objects.filter(cod_esc=codesc)
         esc = pd.DataFrame(list(query.values()))
+        if len(esc) == 0:
+            return Response({'result': {'erro': 'nenhuma escola encontrada'}})
         listinha = []
         for index, row in esc.iterrows():
             didi = {}
@@ -76,6 +81,8 @@ class HistogramaIndicesIDEPAnoFinal(APIView):
         esc.set_index('cod_esc', inplace=True)
 
         sel_esc = esc[esc.index == codesc]
+        if len(sel_esc) == 0:
+            return Response({'result': {'erro': 'nenhuma escola encontrada'}})
         sel_esc_nse = sel_esc.at[codesc, 'nse']
         sel_esc_icg = sel_esc.at[codesc, 'icg']
         sel_esc_indice = float(sel_esc.at[codesc, 'number_2018'].replace(',', '.'))
@@ -102,11 +109,17 @@ class HistogramaIndicesIDEPAnoInicial(APIView):
         esc.set_index('cod_esc', inplace=True)
 
         sel_esc = esc[esc.index == codesc]
+        if len(sel_esc) == 0:
+            return Response({'result': {'erro': 'nenhuma escola encontrada'}})
         sel_esc_nse = sel_esc.at[codesc, 'nse']
         sel_esc_icg = sel_esc.at[codesc, 'icg']
         sel_esc_indice = float(sel_esc.at[codesc, 'number_2018'].replace(',', '.'))
 
         esc_mesmo_parametros = esc[(esc['nse'] == sel_esc_nse) & (esc['icg'] == sel_esc_icg)]
         indices = [float(meta.replace(',', '.')) for meta in list(esc_mesmo_parametros['number_2018'])]
+        codesc_mesmo_indice = list(esc_mesmo_parametros.index)
 
-        return Response({'result': {'indices': indices, 'indice_da_escola': sel_esc_indice}})
+        return Response({'result': {'indices': indices, 'indice_da_escola': sel_esc_indice,
+                                    'escolas_mesmo_indice': codesc_mesmo_indice}})
+
+####################### Beta Functions
