@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from escolas.api.viewsets import EscolasViewSet
 from idep.views import MetasAnosFinais, MetasAnosIniciais, HistogramaIndicesIDEPAnoInicial, \
-    HistogramaIndicesIDEPAnoFinal
+    HistogramaIndicesIDEPAnoFinal, BarChartView, HistogramaIndicesIDEPAnoInicialV2, HistogramaIndicesIDEPAnoFinalV2
 from pessoas.views import LoginView, EscolasDoServidor
 from rest_framework import routers
 from rest_framework_swagger.views import get_swagger_view
@@ -38,4 +38,9 @@ urlpatterns = [path('', include(router.urls)),
                path('meta_ano_inicial/<slug:codesc>', MetasAnosIniciais.as_view()),
                path('indices_ano_inicial/<slug:codesc>', HistogramaIndicesIDEPAnoInicial.as_view()),
                path('indices_ano_final/<slug:codesc>', HistogramaIndicesIDEPAnoFinal.as_view()),
+
+               path('barchart/<slug:codesc>', BarChartView.as_view()),
+               path('histograma_inicial/<slug:codesc>', HistogramaIndicesIDEPAnoInicialV2.as_view()),
+               path('histograma_final/<slug:codesc>', HistogramaIndicesIDEPAnoFinalV2.as_view()),
+
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

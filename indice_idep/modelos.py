@@ -122,31 +122,6 @@ class EscolasEscolas(models.Model):
         db_table = 'escolas_escolas'
 
 
-class IdepAnosIniciaisIndiceEscolas(models.Model):
-    cod_esc = models.TextField(blank=True, null=True)
-    cod_mec = models.TextField(blank=True, null=True)
-    idep_2018 = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'idep_anos_iniciais_indice_escolas'
-
-
-class IdepAnosIniciaisMetasEscolas(models.Model):
-    cod_esc = models.TextField(blank=True, null=True)
-    cod_mec = models.TextField(blank=True, null=True)
-    idep_2019 = models.TextField(blank=True, null=True)
-    idep_2020 = models.TextField(blank=True, null=True)
-    idep_2021 = models.TextField(blank=True, null=True)
-    idep_2022 = models.TextField(blank=True, null=True)
-    idep_2023 = models.TextField(blank=True, null=True)
-    idep_2038 = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'idep_anos_iniciais_metas_escolas'
-
-
 class IdepIdepanosfinaisv1(models.Model):
     cod_esc = models.TextField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
@@ -163,6 +138,31 @@ class IdepIdepanosfinaisv1(models.Model):
         db_table = 'idep_idepanosfinaisv1'
 
 
+class IdepIdepanosiniciaisindiceescolas(models.Model):
+    cod_esc = models.TextField(blank=True, null=True)
+    cod_mec = models.TextField(blank=True, null=True)
+    idep_2018 = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'idep_idepanosiniciaisindiceescolas'
+
+
+class IdepIdepanosiniciaismetasescolas(models.Model):
+    cod_esc = models.TextField(blank=True, null=True)
+    cod_mec = models.TextField(blank=True, null=True)
+    idep_2019 = models.TextField(blank=True, null=True)
+    idep_2020 = models.TextField(blank=True, null=True)
+    idep_2021 = models.TextField(blank=True, null=True)
+    idep_2022 = models.TextField(blank=True, null=True)
+    idep_2023 = models.TextField(blank=True, null=True)
+    idep_2038 = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'idep_idepanosiniciaismetasescolas'
+
+
 class IdepIdepanosiniciaisv1(models.Model):
     cod_esc = models.TextField(primary_key=True)
     nse = models.IntegerField(blank=True, null=True)
@@ -177,6 +177,69 @@ class IdepIdepanosiniciaisv1(models.Model):
     class Meta:
         managed = False
         db_table = 'idep_idepanosiniciaisv1'
+
+
+class IdepParametrosEscolasAi(models.Model):
+    cod_esc = models.TextField(blank=True, null=True)
+    cod_mec = models.TextField(blank=True, null=True)
+    icg = models.TextField(blank=True, null=True)
+    nse = models.TextField(blank=True, null=True)
+    number_3_med_2017_ci = models.TextField(db_column='3_med_2017_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2017_ci = models.TextField(db_column='3_alun_2017_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_2018_ci = models.TextField(db_column='3_med_2018_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2018_ci = models.TextField(db_column='3_alun_2018_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_pond_17_18_ci = models.TextField(db_column='3_med_pond_17_18_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_tot_alun_17_18_ci = models.TextField(db_column='3_tot_alun_17_18_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_2017_lp = models.TextField(db_column='3_med_2017_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2017_lp = models.TextField(db_column='3_alun_2017_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_2018_lp = models.TextField(db_column='3_med_2018_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2018_lp = models.TextField(db_column='3_alun_2018_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_pond_17_18_lp = models.TextField(db_column='3_med_pond_17_18_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_tot_alun_17_18_lp = models.TextField(db_column='3_tot_alun_17_18_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_2017_mt = models.TextField(db_column='3_med_2017_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2017_mt = models.TextField(db_column='3_alun_2017_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_2018_mt = models.TextField(db_column='3_med_2018_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_alun_2018_mt = models.TextField(db_column='3_alun_2018_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_med_pond_17_18_mt = models.TextField(db_column='3_med_pond_17_18_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3_tot_alun_17_18_mt = models.TextField(db_column='3_tot_alun_17_18_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2017_ci = models.TextField(db_column='5_med_2017_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2017_ci = models.TextField(db_column='5_alun_2017_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2018_ci = models.TextField(db_column='5_med_2018_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2018_ci = models.TextField(db_column='5_alun_2018_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_pond_17_18_ci = models.TextField(db_column='5_med_pond_17_18_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_tot_alun_17_18_ci = models.TextField(db_column='5_tot_alun_17_18_ci', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2017_lp = models.TextField(db_column='5_med_2017_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2017_lp = models.TextField(db_column='5_alun_2017_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2018_lp = models.TextField(db_column='5_med_2018_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2018_lp = models.TextField(db_column='5_alun_2018_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_pond_17_18_lp = models.TextField(db_column='5_med_pond_17_18_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_tot_alun_17_18_lp = models.TextField(db_column='5_tot_alun_17_18_lp', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2017_mt = models.TextField(db_column='5_med_2017_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2017_mt = models.TextField(db_column='5_alun_2017_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_2018_mt = models.TextField(db_column='5_med_2018_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_alun_2018_mt = models.TextField(db_column='5_alun_2018_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_med_pond_17_18_mt = models.TextField(db_column='5_med_pond_17_18_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_5_tot_alun_17_18_mt = models.TextField(db_column='5_tot_alun_17_18_mt', blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_5y_ci = models.TextField(db_column='3cresc_5y_CI', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_5y_lp = models.TextField(db_column='3cresc_5y_LP', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_5y_mt = models.TextField(db_column='3cresc_5y_MT', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_5y_ci = models.TextField(db_column='5cresc_5y_CI', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_5y_lp = models.TextField(db_column='5cresc_5y_LP', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_5y_mt = models.TextField(db_column='5cresc_5y_MT', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_1y_ci = models.TextField(db_column='3cresc_1y_CI', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_1y_lp = models.TextField(db_column='3cresc_1y_LP', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_3cresc_1y_mt = models.TextField(db_column='3cresc_1y_MT', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_1y_ci = models.TextField(db_column='5cresc_1y_CI', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_1y_lp = models.TextField(db_column='5cresc_1y_LP', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    number_5cresc_1y_mt = models.TextField(db_column='5cresc_1y_MT', blank=True, null=True)  # Field name made lowercase. Field renamed because it wasn't a valid Python identifier.
+    fluxo_med_17_18 = models.TextField(blank=True, null=True)
+    c = models.TextField(blank=True, null=True)
+    b = models.TextField(blank=True, null=True)
+    a = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'idep_parametros_escolas_ai'
 
 
 class MainTestmodel(models.Model):

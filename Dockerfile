@@ -12,7 +12,7 @@ COPY requirements.txt /opt/services/djangoapp/src/requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . /opt/services/djangoapp/src
-RUN cd indice_idep && python manage.py collectstatic --no-input
+RUN cd indice_idep && python manage.py collectstatic --no-input && python manage.py migrate
 
 
 EXPOSE 80
