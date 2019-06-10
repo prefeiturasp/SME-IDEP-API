@@ -284,7 +284,8 @@ class HistogramaIndicesIDEPAnoInicialV2(APIView):
         codesc_mesmo_indice = [eol_cod_norm(cod) for cod in list(esc_mesmo_parametros.index)]
         esc_indice_mesmo_parametro = esc_indices_inicial[esc_indices_inicial.index.isin(codesc_mesmo_indice)]
 
-        indices = [float(meta.replace(',', '.')) for meta in list(esc_indice_mesmo_parametro['idep_2018'])]
+        indices = [float(meta.replace(',', '.')) for meta in list(esc_indice_mesmo_parametro['idep_2018']) if
+                   meta != '#VALOR!']
         try:
             escolas = Escolas.objects.filter(codesc__in=codesc_mesmo_indice)
             escolas_df = pd.DataFrame(list(escolas.values()))
@@ -337,7 +338,8 @@ class HistogramaIndicesIDEPAnoFinalV2(APIView):
         codesc_mesmo_indice = [eol_cod_norm(cod) for cod in list(esc_mesmo_parametros.index)]
         esc_indice_mesmo_parametro = esc_indices_final[esc_indices_final.index.isin(codesc_mesmo_indice)]
 
-        indices = [float(meta.replace(',', '.')) for meta in list(esc_indice_mesmo_parametro['idep_2018'])]
+        indices = [float(meta.replace(',', '.')) for meta in list(esc_indice_mesmo_parametro['idep_2018']) if
+                   meta != '#VALOR!']
         try:
             escolas = Escolas.objects.filter(codesc__in=codesc_mesmo_indice)
             escolas_df = pd.DataFrame(list(escolas.values()))
