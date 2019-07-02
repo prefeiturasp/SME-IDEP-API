@@ -215,6 +215,7 @@ class BarChartView(APIView):
         for index, row in esc_parametros_inicial.iterrows():
             parametros_inicial['nse'] = row['nse']
             parametros_inicial['icg'] = row['icg']
+            parametros_inicial['fluxo'] = row['fluxo_med_17_18']
 
         # Ano Final
 
@@ -240,6 +241,7 @@ class BarChartView(APIView):
         for index, row in esc_parametros_final.iterrows():
             parametros_finais['nse'] = row['nse']
             parametros_finais['icg'] = row['icg']
+            parametros_finais['fluxo'] = row['fluxo_med_17_18']
 
         return Response(
             {'result': {'cod_esc': cod_esc_str,
