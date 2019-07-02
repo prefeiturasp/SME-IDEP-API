@@ -13,6 +13,9 @@ run:
 migrate:
 	$(COMMAND) "python indice_idep/manage.py migrate"
 
+migrations:
+	$(COMMAND) "python indice_idep/manage.py makemigrations"
+
 collectstatic:
 	$(COMMAND) "python indice_idep/manage.py collectstatic "
 
