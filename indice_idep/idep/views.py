@@ -195,17 +195,19 @@ class BarChartView(APIView):
         for index, row in esc_metas_inicial.iterrows():
             cod_esc_str = row['cod_esc']
 
-            metas_inicial['anos'] = [ano.split('_')[-1] for ano in list(row.index)[3:]]
+            # Removendo o [3:8] para [3:] irá incluir o ano de 2038
+
+            metas_inicial['anos'] = [ano.split('_')[-1] for ano in list(row.index)[3:8]]
             try:
-                metas_inicial['metas'] = [float(meta.replace(',', '.')) for meta in list(row[3:].values)]
+                metas_inicial['metas'] = [float(meta.replace(',', '.')) for meta in list(row[3:8].values)]
             except:
                 metas_inicial['metas'] = 'Não há metas para essa escola'
 
         indices_inicial = {}
         for index, row in esc_indices_inicial.iterrows():
-            indices_inicial['anos'] = [ano.split('_')[-1] for ano in list(row.index)[3:]]
+            indices_inicial['anos'] = [ano.split('_')[-1] for ano in list(row.index)[3:8]]
             try:
-                indices_inicial['indices'] = [float(meta.replace(',', '.')) for meta in list(row[3:].values)]
+                indices_inicial['indices'] = [float(meta.replace(',', '.')) for meta in list(row[3:8].values)]
             except:
                 indices_inicial['indices'] = 'Não há metas para essa escola'
 
