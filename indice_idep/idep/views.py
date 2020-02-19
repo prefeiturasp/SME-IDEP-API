@@ -223,9 +223,9 @@ class BarChartView(APIView):
         for index, row in esc_metas_final.iterrows():
             cod_esc_str = row['cod_esc']
 
-            metas_finais['anos'] = [ano.split('_')[-1] for ano in list(row.index)[3:]]
+            metas_finais['anos'] = [ano.split('_')[-1] for ano in list(row.index)[2:7]]
             try:
-                metas_finais['metas'] = [float(meta.replace(',', '.')) for meta in list(row[3:].values)]
+                metas_finais['metas'] = [float(meta.replace(',', '.')) for meta in list(row[2:7].values)]
             except:
                 metas_finais['metas'] = 'Não há metas para essa escola'
 
@@ -233,7 +233,7 @@ class BarChartView(APIView):
         for index, row in esc_indices_final.iterrows():
             indices_finais['anos'] = [ano.split('_')[-1] for ano in list(row.index)[2:]]
             try:
-                indices_finais['indices'] = [float(meta.replace(',', '.')) for meta in list(row[2:].values)]
+                indices_finais['indices'] = [float(meta.replace(',', '.')) for meta in list(row[2:7].values)]
             except:
                 indices_finais['indices'] = 'Não há metas para essa escola'
 
