@@ -1,212 +1,112 @@
 pipeline {
+    environment {
+      branchname =  env.BRANCH_NAME.toLowerCase()
+      kubeconfig = getKubeconf(env.branchname)
+      registryCredential = 'jenkins_registry'
+    }
+  
     agent {
-      node { 
-        label 'py-uniformes'
-      }
+      node { label 'python-36-idep' }
     }
-    
-    options {
-      buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
-      disableConcurrentBuilds()
-      skipDefaultCheckout()  
-    }
-    
-        
-  stages {
-    stage('CheckOut') {
-        steps {
-          checkout scm
-        }
-      }
-      
-    stage('Analise Codigo') {
-          when {
-            branch 'homolog'
-          }
-            steps {
-                sh 'sonar-scanner \
-                    -Dsonar.projectKey=SME-Indice_IDEP-API \
-                    -Dsonar.sources=. \
-                    -Dsonar.host.url=http://sonar.sme.prefeitura.sp.gov.br \
-                    -Dsonar.login=7697aeba0b3daa9c49b78b485691d21580d7e611'
-            }
-       }
-         
-    stage('Docker build DEV') {
-        when {
-          branch 'dev'
-        }
-          steps {
-          // Start JOB Rundeck para build das imagens Docker
-      
-          script {
-           step([$class: "RundeckNotifier",
-              includeRundeckLogs: true,
-                               
-              //JOB DE BUILD
-              jobId: "3c2faa06-81f0-425c-9fe6-0130cdb18f20",
-              nodeFilters: "",
-              //options: """
-              //     PARAM_1=value1
-               //    PARAM_2=value2
-              //     PARAM_3=
-              //     """,
-              rundeckInstance: "Rundeck-SME",
-              shouldFailTheBuild: true,
-              shouldWaitForRundeckJob: true,
-              tags: "",
-              tailLog: true])
-           }
-        }
-      }
 
-    stage('Deploy DEV') {
-        when {
-          branch 'dev'
+    options {
+      buildDiscarder(logRotator(numToKeepStr: '15', artifactNumToKeepStr: '15'))
+      disableConcurrentBuilds()
+      skipDefaultCheckout()
+    }
+  
+    stages {
+
+        stage('CheckOut') {            
+            steps { checkout scm }            
         }
+
+        
+
+        stage('AnaliseCodigo') {
+	      when { branch 'homolog' }
           steps {
-            //Start JOB Rundeck para update de deploy Kubernetes DEV
-         
+              withSonarQubeEnv('sonarqube-local'){
+                sh 'echo "[ INFO ] Iniciando analise Sonar..." && sonar-scanner \
+                -Dsonar.projectKey=SME-Indice_IDEP-API \
+                -Dsonar.sources=.'
+            }
+          }
+        }
+
+        
+
+        stage('Build') {
+          when { anyOf { branch 'master'; branch 'main'; branch "story/*"; branch 'development'; branch 'develop'; branch 'release'; branch 'homolog';  } } 
+          steps {
             script {
-                step([$class: "RundeckNotifier",
-                  includeRundeckLogs: true,
-                  jobId: "37790146-9bda-4aea-a113-e01dd40089eb",
-                  nodeFilters: "",
-                  //options: """
-                  //     PARAM_1=value1
-                  //    PARAM_2=value2
-                  //     PARAM_3=
-                  //     """,
-                  rundeckInstance: "Rundeck-SME",
-                  shouldFailTheBuild: true,
-                  shouldWaitForRundeckJob: true,
-                  tags: "",
-                  tailLog: true])
+              imagename1 = "registry.sme.prefeitura.sp.gov.br/${env.branchname}/idep-api"
+              //imagename2 = "registry.sme.prefeitura.sp.gov.br/${env.branchname}/sme-outra"
+              dockerImage1 = docker.build(imagename1, "-f Dockerfile .")
+              //dockerImage2 = docker.build(imagename2, "-f Dockerfile_outro .")
+              docker.withRegistry( 'https://registry.sme.prefeitura.sp.gov.br', registryCredential ) {
+              dockerImage1.push()
+              //dockerImage2.push()
               }
-          }
-      }
-		
-	  stage('Docker build HOM') {
-            when {
-                branch 'homolog'
+              sh "docker rmi $imagename1"
+              //sh "docker rmi $imagename2"
             }
-            steps {
-              // Start build das imagens Docker
-      
-          script {
-            step([$class: "RundeckNotifier",
-                includeRundeckLogs: true,
-                    
-                
-                //JOB DE BUILD
-                jobId: "9e6151b3-47be-4104-bc7d-2e1ca9c8f9ac",
-                nodeFilters: "",
-                //options: """
-                //     PARAM_1=value1
-                //    PARAM_2=value2
-                //     PARAM_3=
-                //     """,
-                rundeckInstance: "Rundeck-SME",
-                shouldFailTheBuild: true,
-                shouldWaitForRundeckJob: true,
-                tags: "",
-                tailLog: true])
-           }
           }
-        }    
-       
-    stage('Deploy HOM') {
-          when {
-            branch 'homolog'
-          }
-          steps {
-            
-            timeout(time: 24, unit: "HOURS") {
-               telegramSend("${JOB_NAME}...O Build ${BUILD_DISPLAY_NAME} - Requer uma aprovação para deploy !!!\n Consulte o log para detalhes -> [Job logs](${env.BUILD_URL}console)\n")
-               input message: 'Deseja realizar o deploy?', ok: 'SIM', submitter: 'pedro_walter'
-            }
-            //Start JOB Rundeck para update de imagens no host homologação 
-         
-            script {
-                step([$class: "RundeckNotifier",
-                includeRundeckLogs: true,
-                jobId: "5dccb4cc-742c-4be6-85cb-c5a30a5fadb9",
-                nodeFilters: "",
-                //options: """
-                //     PARAM_1=value1
-                //    PARAM_2=value2
-                //     PARAM_3=
-                //     """,
-                rundeckInstance: "Rundeck-SME",
-                shouldFailTheBuild: true,
-                shouldWaitForRundeckJob: true,
-                tags: "",
-                tailLog: true])
-            }
-         }
         }
 	    
-	  stage('Docker build PROD') {
-        when {
-          branch 'master'
-        }
-        steps {
-            
-            // Start JOB Rundeck para build das imagens Docker
-      
-            script {
-              step([$class: "RundeckNotifier",
-                includeRundeckLogs: true,
-                
-                
-                //JOB DE BUILD
-                jobId: "41c43d50-4384-4e72-9961-20d31c1c6cc3",
-                nodeFilters: "",
-                //options: """
-                //     PARAM_1=value1
-                //    PARAM_2=value2
-                //     PARAM_3=
-                //     """,
-                rundeckInstance: "Rundeck-SME",
-                shouldFailTheBuild: true,
-                shouldWaitForRundeckJob: true,
-                tags: "",
-                tailLog: true])
-            }
-         }
-      }           
-    
-    stage('Deploy PROD') {
-            when {
-                branch 'master'
-            }
+        stage('Deploy'){
+            when { anyOf {  branch 'master'; branch 'main'; branch 'develop'; branch 'development'; branch 'release'; branch 'homolog';  } }        
             steps {
-                timeout(time: 24, unit: "HOURS") {
-                telegramSend("${JOB_NAME}...O Build ${BUILD_DISPLAY_NAME} - Requer uma aprovação para deploy !!!\n Consulte o log para detalhes -> [Job logs](${env.BUILD_URL}console)\n")
-                input message: 'Deseja realizar o deploy?', ok: 'SIM', submitter: 'pedro_walter'
+                script{
+                    if ( env.branchname == 'main' ||  env.branchname == 'master' || env.branchname == 'homolog' || env.branchname == 'release' ) {
+                        sendTelegram("🤩 [Deploy ${env.branchname}] Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nMe aprove! \nLog: \n${env.BUILD_URL}")
+                        timeout(time: 24, unit: "HOURS") {
+                            input message: 'Deseja realizar o deploy?', ok: 'SIM', submitter: 'alessandro_fernandes, kelwy_oliveira, anderson_morais, luis_zimmermann, rodolpho_azeredo, ollyver_ottoboni'
+                        }
+                        withCredentials([file(credentialsId: "${kubeconfig}", variable: 'config')]){
+                            sh('cp $config '+"$home"+'/.kube/config')
+                            sh 'kubectl rollout restart deployment/idep-api -n sme-idep'
+                            
+                        }
+                    }
+                    else{
+                        withCredentials([file(credentialsId: "${kubeconfig}", variable: 'config')]){
+                            sh('cp $config '+"$home"+'/.kube/config')
+                            sh 'kubectl rollout restart deployment/idep-api -n sme-idep'
+                            
+                        }
+                    }
                 }
-                    
-            
-                script {
-                    step([$class: "RundeckNotifier",
-                    includeRundeckLogs: true,
-                    jobId: "1cbec08c-8eff-4ab0-9da1-f5a87f76057b",
-                    nodeFilters: "",
-                    //options: """
-                    //     PARAM_1=value1
-                    //    PARAM_2=value2
-                    //     PARAM_3=
-                    //     """,
-                    rundeckInstance: "Rundeck-SME",
-                    shouldFailTheBuild: true,
-                    shouldWaitForRundeckJob: true,
-                    tags: "",
-                    tailLog: true])
-                }
-        
-        
-            }
-        }
-  }    
+            }           
+        } 
 
+        
+    }
+
+  post {
+    success { sendTelegram("🚀 Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nStatus: Success \nLog: \n${env.BUILD_URL}console") }
+    unstable { sendTelegram("💣 Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nStatus: Unstable \nLog: \n${env.BUILD_URL}console") }
+    failure { sendTelegram("💥 Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nStatus: Failure \nLog: \n${env.BUILD_URL}console") }
+    aborted { sendTelegram ("😥 Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nStatus: Aborted \nLog: \n${env.BUILD_URL}console") }
+  }
+}
+def sendTelegram(message) {
+    def encodedMessage = URLEncoder.encode(message, "UTF-8")
+    withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'),
+    string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
+        response = httpRequest (consoleLogResponseBody: true,
+                contentType: 'APPLICATION_JSON',
+                httpMode: 'GET',
+                url: 'https://api.telegram.org/bot'+"$TOKEN"+'/sendMessage?text='+encodedMessage+'&chat_id='+"$CHAT_ID"+'&disable_web_page_preview=true',
+                validResponseCodes: '200')
+        return response
+    }
+}
+def getKubeconf(branchName) {
+    if("main".equals(branchName)) { return "config_prd"; }
+    else if ("master".equals(branchName)) { return "config_prd"; }
+    else if ("homolog".equals(branchName)) { return "config_hom"; }
+    else if ("release".equals(branchName)) { return "config_hom"; }
+    else if ("development".equals(branchName)) { return "config_dev"; }
+    else if ("develop".equals(branchName)) { return "config_dev"; }
 }
