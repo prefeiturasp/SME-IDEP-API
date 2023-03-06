@@ -1,0 +1,11 @@
+Django==2.2.1
+kombu-sqlalchemy==1.1.0
+djangorestframework==3.9.4
+django-rest-swagger==2.2.0
+whitenoise
+django-filter
+django-environ
+djangorestframework-jwt
+pandas
+django-cors-headers
+gunicorn==20.0.4
