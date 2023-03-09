@@ -1,20 +1,18 @@
-FROM python:3.6
+FROM python:3.8-slim
 
 ENV PYTHONUNBUFFERED 1
-RUN mkdir -p /opt/services/djangoapp/src
 
-COPY Pipfile Pipfile.lock /opt/services/djangoapp/src/
 WORKDIR /opt/services/djangoapp/src
-RUN pip install pipenv && pipenv install --system
+COPY . /opt/services/djangoapp/src/
 
-# Add requirements.txt to the image
-COPY requirements.txt /opt/services/djangoapp/src/requirements.txt
-RUN pip install -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc g++ libpq-dev && \
+    pip install psycopg2-binary && \
+    pip --no-cache-dir install --upgrade pip && \
+    pip --no-cache-dir install --requirement requirements/production.txt && \
+    apt-get remove -y gcc g++ && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
 
-COPY . /opt/services/djangoapp/src
-RUN cd indice_idep && python manage.py collectstatic --no-input
-
-
-EXPOSE 80
-CMD ["gunicorn", "-c", "config/gunicorn/conf.py", "--bind", ":8000", "--chdir", "indice_idep", "indice_idep.wsgi:application"]
+EXPOSE 8000
 
