@@ -6,7 +6,8 @@ pipeline {
     }
   
     agent {
-      node { label 'jenkins-slave' }
+      //node { label 'jenkins-slave' }
+      any 
     }
 
     options {
