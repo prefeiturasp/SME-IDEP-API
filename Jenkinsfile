@@ -5,11 +5,9 @@ pipeline {
       registryCredential = 'jenkins_registry'
     }
   
-    agent {
+    agent any
       //node { label 'jenkins-slave' }
-      any 
-    }
-
+    
     options {
       buildDiscarder(logRotator(numToKeepStr: '15', artifactNumToKeepStr: '15'))
       disableConcurrentBuilds()
