@@ -6,9 +6,11 @@ pipeline {
       namespace = "${env.branchname == 'dev' ? 'idep-dev' : env.branchname == 'homolog' ? 'idep-hom' : env.branchname == 'homolog-r2' ? 'idep-hom2' : 'sme-idep' }"
     }
   
-    agent {
-      node { label 'builder' }
-    }
+    agent { kubernetes { 
+                  label 'builder'
+                  defaultContainer 'builder'
+                }
+              }
     
     options {
       buildDiscarder(logRotator(numToKeepStr: '15', artifactNumToKeepStr: '15'))
